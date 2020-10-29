@@ -1,2 +1,2 @@
 # DadosLab1
-To integrador dados
+Tp integrador dados
