@@ -13,7 +13,7 @@
 #include <stdlib.h>
 
 using namespace rlutil;
-
+int Puntaje_De_Ronda;
 enum Color{
 cNEGRO=0,
 cAZUL=1,
@@ -391,11 +391,14 @@ if(Num[2]==Num_Lanz){
 }
 }
 }
-if (Puntaje_Ronda==0){
+if (Puntaje_De_Ronda==0){
 Tiradas_Fallidas=Tiradas_Fallidas+1;
   rlutil::setBackgroundColor(rlutil::RED);
                     locate(15,18);
     cout << "No obtuviste nada !";
+}
+else{
+    Puntaje_De_Ronda=Puntaje_De_Ronda Puntaje_Ronda;
 }
 
  for(int x=1; x<=30; x++){
@@ -413,7 +416,7 @@ Tiradas_Fallidas=Tiradas_Fallidas+1;
 
 	}
 	locate(2,25);
-	cout << "Puntaje de la ronda: "<< Puntaje_Ronda;
+	cout << "Puntaje de la ronda: "<< Puntaje_De_Ronda;
 locate(1,3);
  cout << "VECES QUE OBTUVO BUNCO: "<< Total_Bunco;
 
