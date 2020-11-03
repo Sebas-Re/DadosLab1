@@ -34,7 +34,7 @@ cBLANCO=15
 };
 void ModoSimulado(int Tiradas_Fallidas, int Puntaje, int Total_Bunco, int Rondas, int Num_Lanz, int Puntaje_Ronda, int Nombre_Primer_Jugador, int Num[], int Tam){
   Tam=3;
-    Tiradas_Fallidas=0;
+       Tiradas_Fallidas=0;
     Puntaje=0;
 Total_Bunco=0;
     Rondas=0;
@@ -54,8 +54,8 @@ Total_Bunco=0;
 		putchar ('*');
 	}
 	locate(25,11);
-//cout << "Ingresar nombre: ";
-//cin >> Nombre_Primer_Jugador;
+	cout << "Ingresar nombre: ";
+cin >> Nombre_Primer_Jugador;
 cls();
 while (Rondas!=6){
         Num_Lanz=0;
@@ -64,7 +64,7 @@ while (Rondas!=6){
     while (Puntaje_Ronda<21){
 
             locate(1,1);
-//    cout <<  "TURNO DE "<< Nombre_Primer_Jugador<< "  |  "<< "RONDA Nº "<< Rondas<< "  |  "<< "PUNTAJE ACUMULADO:  "<< Puntaje<< " PUNTOS";
+cout <<  "TURNO DE "<< Nombre_Primer_Jugador<< "  |  "<< "RONDA Nº "<< Rondas<< "  |  "<< "PUNTAJE ACUMULADO:  "<< Puntaje<< " PUNTOS";
     for(int x=1; x<=75; x++){
 		gotoxy (x,2);
 		putchar ('-');
@@ -100,7 +100,7 @@ system("color 40");
         locate(1,6);
  //Generador();
 
-for (int i=0; i<=Tam; i++){
+for (int i=0; i<=2; i++){
 locate(1,20+i);
 rlutil::setBackgroundColor(rlutil::RED);
     cout<<i+1<<"# : ";
@@ -115,10 +115,10 @@ resetColor();
         const int valor = Num[i];
         const int numDado = i+1;
         const int Y= 10;
-			const int ALTO= 4;
-			const int INI = 1;
-			const int X = INI + (numDado * 10);
-			const int ANCHO = 8;
+        const int ALTO= 4;
+        const int INI = 1;
+        const int X = INI + ((i *10)+1);
+        const int ANCHO = 8;
 
 			   for(int i=X; i<=X+ANCHO; i++){
 
@@ -289,9 +289,9 @@ if ((Num[0]+Num[1]+Num[2])%5==0){
 
 else{
                     //Escalera
-if(Num[0]<=1||Num[1]==1||Num[2]==1){
-                     if (Num[0]<=2||Num[1]==2||Num[2]==2){
-                        if(Num[0]<=3||Num[1]==3||Num[2]==3){
+if(Num[0]==1||Num[1]==1||Num[2]==1){
+                     if (Num[0]==2||Num[1]==2||Num[2]==2){
+                        if(Num[0]==3||Num[1]==3||Num[2]==3){
 
                                 Puntaje_Ronda=Puntaje_Ronda+2;
                                     rlutil::setBackgroundColor(rlutil::RED);
@@ -303,31 +303,31 @@ if(Num[0]<=1||Num[1]==1||Num[2]==1){
 
                 }
 else{
-if (Num[0]<=2||Num[1]==2||Num[2]==2){
-                        if(Num[0]<=3||Num[1]==3||Num[2]==3){
-                              if(Num[0]<=4||Num[1]==4||Num[2]==4){
-                                Puntaje_Ronda=Puntaje_Ronda+2;
-                                    rlutil::setBackgroundColor(rlutil::RED);
+if (Num[0]==2||Num[1]==2||Num[2]==2){
+        if(Num[0]==3||Num[1]==3||Num[2]==3){
+            if(Num[0]==4||Num[1]==4||Num[2]==4){
+                    Puntaje_Ronda=Puntaje_Ronda+2;
+                    rlutil::setBackgroundColor(rlutil::RED);
+                    locate(15,18);
+                    cout << "Obtuviste una escalera ! ";
+                    }
+                }
+            }
+else{
+if(Num[0]==3||Num[1]==3||Num[2]==3){
+if(Num[0]==4||Num[1]==4||Num[2]==4){
+if(Num[0]==5||Num[1]==5||Num[2]==5){
+     Puntaje_Ronda=Puntaje_Ronda+2;
+     rlutil::setBackgroundColor(rlutil::RED);
      locate(15,18);
-                                 cout << "Obtuviste una escalera ! ";
+     cout << "Obtuviste una escalera ! ";
+                              }
                               }
                         }
-                     }
 else{
-if(Num[0]<=3||Num[1]==3||Num[2]==3){
-                              if(Num[0]<=4||Num[1]==4||Num[2]==4){
-                           if(Num[0]<=5||Num[1]==5||Num[2]==5){
-                                Puntaje_Ronda=Puntaje_Ronda+2;
-                                    rlutil::setBackgroundColor(rlutil::RED);
-     locate(15,18);
-                                 cout << "Obtuviste una escalera ! ";
-                              }
-                              }
-                        }
-else{
-if(Num[0]<=4||Num[1]==4||Num[2]==4){
-if(Num[0]<=5||Num[1]==5||Num[2]==5){
-if(Num[0]<=6||Num[1]==6||Num[2]==6){
+if(Num[0]==4||Num[1]==4||Num[2]==4){
+if(Num[0]==5||Num[1]==5||Num[2]==5){
+if(Num[0]==6||Num[1]==6||Num[2]==6){
                 Puntaje_Ronda=Puntaje_Ronda+2;
                     rlutil::setBackgroundColor(rlutil::RED);
     locate(15,18);
@@ -382,18 +382,20 @@ if(Num[2]==Num_Lanz){
      locate(15,18);
         cout<<"Obtuviste 1 Puntos !";
 }
-else{
-    Tiradas_Fallidas=Tiradas_Fallidas+1;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+if (Puntaje_Ronda==0){
+Tiradas_Fallidas=Tiradas_Fallidas+1;
+  rlutil::setBackgroundColor(rlutil::RED);
+                    locate(15,18);
     cout << "No obtuviste nada !";
-}
-}
-}
-}
-}
-}
-}
-}
-}
 }
 
  for(int x=1; x<=30; x++){
