@@ -294,31 +294,51 @@ void Opciones(int v,int Mganador[],int tam,char Jmaximo[],char Janterior[]){
 }
 
 void instrucciones(){
-    locate(50,5);
-    Sleep(300);
-    cout<<"Reglamento del juego."<<endl<<endl<<endl<<endl;
-    Sleep(300);
+locate(50,21);
+Sleep(300);
+                    cout<<"Reglamento del juego."<<endl<<endl<<endl<<endl;
+Sleep(300);
     cout<<"Bunco es un juego que utiliza 3 dados, y que puede ser jugado por uno o varios jugadores."<<endl;
     cout<<"El juego consiste en seis rondas, las cuales progresan secuencialmente del uno al seis."<<endl;
     cout<<"Cada ronda comienza con un lanzamiento de tres dados y un posterior analisis del puntaje al que equivale la tirada. "<<endl;
     cout<<"El jugador obtendra:"<<endl<<endl<<endl;
-    Sleep(300);
-cout<<"21 puntos si los tres dados coinciden con el numero de la ronda que se esta jugando (“Bunco”)."<<endl;
-cout<<"5 puntos si los tres dados son iguales pero no coinciden con la ronda en curso."<<endl;
-cout<<"3 puntos si la suma de los tres dados es divisible por 5."<<endl;
-cout<<"2 puntos si los tres dados forman una escalera."<<endl;
-cout<<"1 punto por cada dado que coincida con el numero de la ronda."<<endl<<endl<<endl;
-cout<<"Nota: De obtener mas de una combinacion en el mismo lanzamiento, siempre debera sumar unicamente el puntaje de mayor valor."<<endl;
-cout<<"Mientras el jugador obtenga algun puntaje en la tirada, podra seguir realizando lanzamientos."<<endl;
-cout<<"Si realiza una tirada que no suma ningun puntaje, a la misma se la considerara tirada fallida.  "<<endl<<endl<<endl;
-locate(50,21);
-cout<<"Finalizacion de cada ronda"<<endl<<endl<<endl<<endl;
 Sleep(300);
-cout<<"En el modo de un jugador: cada ronda termina cuando el jugador llega a un puntaje mayor o igual a 21. "<<endl;
-cout<<"Al terminar las seis rondas, se le restara al puntaje final un total de dos(1) puntos por cada tirada fallida que el jugador haya realizado."<<endl;
-cout<<"En el modo de dos jugadores: cada ronda termina cuando uno de los jugadores obtiene un puntaje mayor o igual a 21 puntos. "<<endl;
-cout<<"Si en la primera tanda de tiradas de una ronda el jugador 1 logra este puntaje sin ninguna "<<endl<<endl<<endl;
+    cout<<"21 puntos si los tres dados coinciden con el numero de la ronda que se esta jugando (Bunco)."<<endl;
+    cout<<"5 puntos si los tres dados son iguales pero no coinciden con la ronda en curso."<<endl;
+    cout<<"3 puntos si la suma de los tres dados es divisible por 5."<<endl;
+    cout<<"2 puntos si los tres dados forman una escalera."<<endl;
+    cout<<"1 punto por cada dado que coincida con el numero de la ronda."<<endl<<endl<<endl;
+    cout<<"Nota: De obtener mas de una combinacion en el mismo lanzamiento, siempre debera sumar unicamente el puntaje de mayor valor."<<endl;
+    cout<<"Mientras el jugador obtenga algun puntaje en la tirada, podra seguir realizando lanzamientos."<<endl;
+    cout<<"Si realiza una tirada que no suma ningun puntaje, a la misma se la considerara tirada fallida.  "<<endl<<endl<<endl;
+
 system("pause");
+system("cls");
+
+locate(50,21);
+                    cout<<"Finalizacion de cada ronda"<<endl<<endl<<endl<<endl;
+Sleep(300);
+    cout<<"En el modo de un jugador: cada ronda termina cuando el jugador llega a un puntaje mayor o igual a 21. "<<endl;
+    cout<<"Al terminar las seis rondas, se le restara al puntaje final un total de dos(2) puntos por cada tirada fallida que el jugador haya realizado."<<endl;
+    cout<<"En el modo de dos jugadores: cada ronda termina cuando uno de los jugadores obtiene un puntaje mayor o igual a 21 puntos. "<<endl;
+    cout<<"Si en la primera tanda de tiradas de una ronda el jugador 1 logra este puntaje sin ninguna tirada fallida, el segundo jugador puede realizar lanzamientos hasta cumplir con la condicion de finalizacion de ronda o realizar una tirada fallida."<<endl<<endl<<endl;
+
+system("pause");
+system("cls");
+locate(50,17);
+                    cout << "FIN DEL JUEGO";
+locate(1,20);
+Sleep(300);
+    cout << "El juego termina al concluir las seis rondas. El ganador de la partida es aquel jugador que obtenga el puntaje mas alto.";
+    locate(1,21);
+    cout <<"En caso de paridad, gana el que tenga mayor cantidad de Buncos.";
+    locate(1,24);
+    Sleep(300);
+    cout <<"Se dara un empate solamente si ambos jugadores obtienen el mismo puntaje y la misma cantidad de Buncos al finalizar las rondas.";
+locate(1,26);
+system("pause");
+system("cls");
+
 }
 
 void Findelprograma(){
